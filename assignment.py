@@ -25,7 +25,7 @@ def factorPair(a,b):
     return answer
 
 
-def toradians(angled):
+def toRadians(angled):
     radians=(angled*math.pi)/180
     return radians
 
@@ -37,13 +37,11 @@ def solution(numbers):
 
 def quadratic(a,b,c):
    m1= math.sqrt((b**2)-(4*a*c))
-   m2= -b+m1
+   m2= -1*b+m1
    x1=m2/(2*a)
-   x1=round(x1,2)
    n1= math.sqrt((b**2)-(4*a*c))
-   n2= -b-n1
+   n2= -1*b-n1
    x2=n2/(2*a)
-   x2=round(x2,2)
    lis=[]
    lis.append(x1)
    lis.append(x2)
@@ -64,7 +62,7 @@ def cosineLaw(a,b,anglec, oppositeside="True"):
             snum=a
 
         q1=1
-        q2=2*snum*math.cos(toradians(anglec))
+        q2=2*snum*math.cos(toRadians(anglec))
         q3=(snum**2)-(lnum**2)
         x=quadratic(q1,q2,q3)
         c=solution(x)
