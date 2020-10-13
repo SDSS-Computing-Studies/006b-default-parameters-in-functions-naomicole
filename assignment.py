@@ -24,13 +24,16 @@ def factorPair(a,b):
     return answer
 
 
-def cosineLaw(sidea,sideb,anglec, by="True"):
-    sidec=(sidea**2)+(sideb**2)-2*sidea*sideb*math.cos(anglec)
-    c=math.sqrt(sidec)
-    return c
+def cosineLaw(a,b,anglec, by="True"):
+    sidec= math.sqrt(((a**2)+(b**2))+((-2*a*b)*(math.cos(anglec))))
+    return sidec
 
-def toradians():
-    pass
+
+def toradians(angled):
+    radians=(angled*math.pi)/180
+    return radians
+
+    
 
 def solution():
     pass
@@ -38,5 +41,8 @@ def solution():
 def quadratic():
     pass
 
-x= cosineLaw(20,20,20)
+x= toradians(37)
 print(x)
+
+y= cosineLaw(11,8,x)
+print(y)
