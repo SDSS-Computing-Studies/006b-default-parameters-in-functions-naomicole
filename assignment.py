@@ -14,6 +14,7 @@ def tempConversion(a, by="C"):
     answer=round(y,1)
     return answer
 
+
 def factorPair(a,b):
     c=a/b
 
@@ -26,7 +27,8 @@ def factorPair(a,b):
 
 def cosineLaw(a,b,anglec, by="True"):
     sidec= math.sqrt(((a**2)+(b**2))+((-2*a*b)*(math.cos(anglec))))
-    return sidec
+    c=round(sidec,2)
+    return c
 
 
 def toradians(angled):
@@ -34,9 +36,10 @@ def toradians(angled):
     return radians
 
     
+def solution(numbers):
+    x2=numbers[1]
+    return x2
 
-def solution():
-    pass
 
 def quadratic(a,b,c):
    m1= math.sqrt((b**2)-(4*a*c))
@@ -47,6 +50,10 @@ def quadratic(a,b,c):
    n2= -b-n1
    x2=n2/(2*a)
    x2=round(x2,2)
+   lis=[]
+   lis.append(x1)
+   lis.append(x2)
+   lis.sort
    return x1, x2
   
 
@@ -59,3 +66,7 @@ print(y)
 
 w= quadratic(5,6,1)
 print(w)
+
+z=solution(w)
+print(z)
+
