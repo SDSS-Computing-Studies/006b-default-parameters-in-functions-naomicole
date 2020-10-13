@@ -67,7 +67,7 @@ def cosineLaw(a,b,anglec, oppositeside="True"):
         q2=2*snum*math.cos(toradians(anglec))
         q3=(snum**2)-(lnum**2)
         x=quadratic(q1,q2,q3)
-        c=solutions(x)
+        c=solution(x)
 
     return c
 
