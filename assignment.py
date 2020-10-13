@@ -37,22 +37,22 @@ def solution(numbers):
 
 def quadratic(a,b,c):
    m1= math.sqrt((b**2)-(4*a*c))
-   m2= -1*b+m1
+   m2= (-1*b)+m1
    x1=m2/(2*a)
    n1= math.sqrt((b**2)-(4*a*c))
-   n2= -1*b-n1
+   n2= (-1*b)-n1
    x2=n2/(2*a)
    lis=[]
    lis.append(x1)
    lis.append(x2)
-   lis.sort
-   return x1, x2
+   lis.sort()
+   return lis
   
 
-def cosineLaw(a,b,anglec, oppositeside="True"):
-    sidec= math.sqrt(((a**2)+(b**2))+((-2*a*b)*(math.cos(anglec))))
-    c=round(sidec,2)
-    if oppositeside==False:
+def cosineLaw(a,b,anglec, oppositeSide=True):
+    sidec= math.sqrt(((a**2)+(b**2))+((-2*a*b)*(math.cos(toRadians(anglec)))))
+    c=sidec
+    if oppositeSide==False:
         if a>b:
             lnum=a
             snum=b
@@ -62,7 +62,7 @@ def cosineLaw(a,b,anglec, oppositeside="True"):
             snum=a
 
         q1=1
-        q2=2*snum*math.cos(toRadians(anglec))
+        q2=(-1*2)*snum*math.cos(toRadians(anglec))
         q3=(snum**2)-(lnum**2)
         x=quadratic(q1,q2,q3)
         c=solution(x)
