@@ -38,11 +38,24 @@ def toradians(angled):
 def solution():
     pass
 
-def quadratic():
-    pass
+def quadratic(a,b,c):
+   m1= math.sqrt((b**2)-(4*a*c))
+   m2= -b+m1
+   x1=m2/(2*a)
+   x1=round(x1,2)
+   n1= math.sqrt((b**2)-(4*a*c))
+   n2= -b-n1
+   x2=n2/(2*a)
+   x2=round(x2,2)
+   return x1, x2
+  
+
 
 x= toradians(37)
 print(x)
 
 y= cosineLaw(11,8,x)
 print(y)
+
+w= quadratic(5,6,1)
+print(w)
